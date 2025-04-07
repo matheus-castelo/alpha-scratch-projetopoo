@@ -1,4 +1,5 @@
-﻿using FFCE.Data;
+﻿using System.ComponentModel.Design.Serialization;
+using FFCE.Data;
 using FFCE.Models;
 
 namespace FFCE {
@@ -11,7 +12,18 @@ namespace FFCE {
             context.SaveChanges(); //Salvando no banco
             //-----------------
             //Update
+            rose = context.Flowers.FirstOrDefault(); //Rehidratação
+            rose.Name = "Rosa Vermelha";
+            context.Update(rose);
+            context.SaveChanges();
+            //--------------
+            //Delete
+            rose = context.Flowers.FirstOrDefault(); //Rehidratação
+            context.Remove(rose);
+            context.SaveChanges();
             }
+            
+           
         }
     }
 }
