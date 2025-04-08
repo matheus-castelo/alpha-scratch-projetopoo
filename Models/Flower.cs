@@ -2,6 +2,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FFCE.Models {
+/* The Flower class represents a table in a database with properties for Id, Name,
+Url, and Price. */
     [Table("Flower")]
     public class Flower {
         [Key] //Identificando como chave primária
