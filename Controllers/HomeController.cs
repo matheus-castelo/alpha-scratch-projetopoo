@@ -8,7 +8,7 @@ namespace FFCE.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return Ok("Hello, World!");
+            return Ok("My Homepage :) ");
         }
     }
 }
